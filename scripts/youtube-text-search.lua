@@ -53,7 +53,7 @@ local o = {
     num_results = 40,
 
     --the url to send API calls to
-    API_path = "https://www.googleapis.com/youtube/v3/",
+    API_path = "https://inv.tux.pizza/api/v1/",
 
     --attempt this API if the default fails
     fallback_API_path = "",
@@ -62,10 +62,10 @@ local o = {
     frontend = "https://www.youtube.com",
 
     --use invidious API calls
-    invidious = false,
+    invidious = true,
 
     --whether the fallback uses invidious as well
-    fallback_invidious = false
+    fallback_invidious = true
 }
 
 opts.read_options(o)
