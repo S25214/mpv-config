@@ -1,4 +1,6 @@
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+# run this first
+# Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 # Check if Scoop is installed
 Function Test-ScoopInstalled {
     $scoopExists = Get-Command scoop -ErrorAction SilentlyContinue

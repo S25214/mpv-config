@@ -3,3 +3,4 @@ watch_later/
 persistent_config.json
 mpvClipboard.log
 *.jpg
+mpvHistory.log
