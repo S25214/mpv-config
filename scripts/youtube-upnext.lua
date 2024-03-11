@@ -732,11 +732,13 @@ local function on_file_start(_)
                 end
             end
             -- Append first video
-            add_to_playlist(upnext[1].file, upnext[1].label, upnext[1].length, "append")
-            appended_to_playlist[upnext[1].file] = true
+            --add_to_playlist(upnext[1].file, upnext[1].label, upnext[1].length, "append")
+            --appended_to_playlist[upnext[1].file] = true
         end
     end
 end
+
+mp.add_key_binding(nil, "load-recommend", on_file_start)
 
 local function show_menu()
     local upnext, num_upnext = load_upnext()
