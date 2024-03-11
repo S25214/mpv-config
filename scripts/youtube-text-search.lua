@@ -79,10 +79,10 @@ end
 
 format_options()
 
-list.header = ("%s Search: \\N-------------------------------------------------"):format(o.invidious and "Invidious" or "Youtube")
+list.header = ("%s : \\N-------------------------------------------------"):format(o.invidious and "Youtube" or "Youtube")
 list.num_entries = 17
 list.list_style = [[{\fs10}\N{\q2\fs25\c&Hffffff&}]]
-list.empty_text = "enter search query"
+list.empty_text = "Press [ / ] to search"
 
 local ass_escape = list.ass_escape
 
@@ -208,7 +208,7 @@ end
 
 --sends a search API request - handles Google/Invidious API differences
 local function search_request(queries, API_path, invidious)
-    list.header = ("%s Search: %s\\N-------------------------------------------------"):format(invidious and "Invidious" or "Youtube", ass_escape(queries.q, true))
+    list.header = ("%s : %s\\N-------------------------------------------------"):format(invidious and "Youtube" or "Youtube", ass_escape(queries.q, true))
     list.list = {}
     list.empty_text = "~"
     list:update()
